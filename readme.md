@@ -17,11 +17,18 @@ License: [MIT](license.md "Смотреть лицензию")
 ## Данные
 
 ```
+index.php - рабочий файл проекта
+index-temp.php - решение с помощью библиотеки SimpleHTMLDOM (надстройка класс DOMDocument)
+temp1.php - пример использования Iterator из юнита (обработка CSV файла)
+temp2.php - пробный файл (для отработки вариантов)
 temp_code.html - исходный (резервный) код html
-library/simple_html_dom.php - библиотекf SimpleHTMLDOM - надстройка класс DOMDocument
 code.html - рабочий файл с кодом html
+codeNew.html - генерируемый файл без соответсвующих meta тегов 
+library/simple_html_dom.php - библиотекf SimpleHTMLDOM - надстройка класс DOMDocument 
+(Для наглядности значения метатегов заменяются на соотвествующие им значения '_metatags_')
 
-Для наглядности значения метатегов заменяются на соотвествующие им значения '_metatags_'
+
+
 ```
 
 ## Задание- 

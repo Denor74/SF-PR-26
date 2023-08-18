@@ -6,12 +6,13 @@ include 'library/simple_html_dom.php';
 $html = new simple_html_dom();
 $html->load_file('code.html');
 //echo '<pre>';
-//var_dump($html);
+//print_r($html);
+/*
 $metaDescription =  $html->find("meta[name='description']", 0)->content = '_description_';
 $metaKeywords = $html->find("meta[name='keywords']", 0)->content = '_keyword_';
   $metaTitle =  $html->find('title');
 
-echo $metaDescription . PHP_EOL;
+// echo $metaDescription . PHP_EOL;
 
 //---echo $metaKeywords . PHP_EOL;
 
@@ -23,6 +24,8 @@ echo $metaDescription . PHP_EOL;
 //echo $html->save();
 // Сохраняем файл Подгружаемый библиотекой SimpleHTMLDOM
 $html->save("code.html");
+
+*/
 
 // $htmlDOM = new DOMDocument('1.0');
 // // мы хотим красивый вывод
@@ -86,7 +89,7 @@ echo '</pre>';
 */
 
 
-/*
+
 echo '<pre>';
 echo '****************************************';
 echo 'file_get_contents Получить и вывести исходный код домашней страницы сайта';
@@ -94,9 +97,14 @@ echo '****************************************';
 echo '</pre>';
 
 
-$homePage = file_get_contents('code.phtml');
-echo $homePage;
-*/
+$homePage = file_get_contents('code.html');
+//echo $homePage;
+
+preg_match_all('#<([a-z]+)[^>]*>(?:.+</\1>)?#is', $homePage, $matches);
+// <!DOCTYPE html> is standardized document type definition and is not a tag
+
+print_r($matches);
+
 
 /*
 $page = file_get_contents('code.phtml');
